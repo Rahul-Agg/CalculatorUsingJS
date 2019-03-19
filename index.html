@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:600,700">
+	<script  type="text/javascript">
+		function resetAll(){
+               forms.answer.value="";
+               forms.output.value="";
+		}
+		function displayNum(n1){
+              forms.answer.value+=n1;
+		}
+		function displayPoint(n2){
+			var x=forms.answer.value
+			var n=x.indexOf(".")+1;
+			if(n==0){
+			forms.answer.value+=n2;	
+			}
+			else{
+				forms.answer.value=forms.answer.value
+			}
+			
+			
+		}
+
+</script>
+</head>
+<body>
+
+<div class="container">
+	<div id="calculator">
+
+		<form name="forms">
+			<div class="result">
+				<input type="text" class="history" name="answer" >
+				<input type="text" class="output" name="output">
+
+			</div>
+	<div id="keyboard"> 
+	<input type="button" value="C" name="clear" class="operator" onclick=" resetAll() " >
+	<input type="button" value="CE" class="operator">
+	<input type="button" value="%" class="operator" onclick="forms.answer.value+='%'">
+	<input type="button" value='/' class="operator" onclick="forms.answer.value +=  '/' ">
+	<input type="button" value='7' name="btn7" class="number" onclick="displayNum(btn7.value)"  >
+	<input type="button" value='8' class="number" onclick="forms.answer.value +=  '8' ">
+	<input type="button" value='9' class="number" onclick="forms.answer.value +=  '9' ">
+	<input type="button" value='X' class="operator" onclick="forms.answer.value +=  '*' ">
+	<input type="button" value='4' class="number" onclick="forms.answer.value +=  '4' ">
+	<input type="button" value='5' class="number" onclick="forms.answer.value +=  '5' ">
+	<input type="button" value='6' class="number" onclick="forms.answer.value +=  '6' ">
+	<input type="button" value='-' class="operator" onclick="forms.answer.value +=  '-' ">
+	<input type="button" value='1' class="number" onclick="forms.answer.value +=  '1' ">
+	<input type="button" value='2' class="number" onclick="forms.answer.value +=  '2' ">
+	<input type="button" value='3' class="number" onclick="forms.answer.value +=  '3' ">
+	<input type="button" value='+' class='operator' onclick="forms.answer.value +=  '+' ">
+	<input type="button" value="00" class="number" onclick="forms.answer.value+='00' " >
+    <input type="button" value='0' class="number" onclick="forms.answer.value +=  '0' ">
+	<input type="button" value="."  name="btnpoint" class="number" onclick="displayPoint(btnpoint.value) ">
+	<input type="button" value='=' class="operator"  onclick="forms.output.value =  eval(forms.answer.value) ">
+
+	
+</div>
+
+
+	</form>
+	</div>
+	
+</div>
+
+</body>
+</html>
